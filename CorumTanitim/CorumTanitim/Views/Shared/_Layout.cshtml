@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="@Url.Action("Index", "Home")" class="nav-link px-3 text-white">Ana sayfa</a></li>
+                <li><a href="@Url.Action("Tarihimiz", "Home")" class="nav-link px-3 text-white">Tarihimiz</a></li>
+                <li><a href="@Url.Action("Yemekler", "Home")" class="nav-link px-3 text-white">Yemekler</a></li>
+                <li><a href="@Url.Action("Gezilecekyerler", "Home")" class="nav-link px-3 text-white">Gezilecek Yerler</a></li>
+                <li><a href="@Url.Action("BelediyeBaskanlarımız", "Home")" class="nav-link px-3 text-white">Belediye başkanlarımız</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input type="search" class="form-control form-control-dark" placeholder="Ara" aria-label="Search">
+            </form>
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">Giriş Yap</button>
+                <button type="button" class="btn btn-warning">Kayıt Ol</button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Mikail Kaynar'ın ASP.NET projesi</p>
+    </footer>
+</div>
+
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+<script src="~/Scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
